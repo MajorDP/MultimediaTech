@@ -1,0 +1,118 @@
+.excercises {
+  width: 25%;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #333;
+  border: 2px solid #444;
+  border-top: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  color: #f0f0f0;
+
+  animation: slideInLeft 1s forwards;
+}
+
+.selector {
+  padding: 1rem;
+  text-align: center;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+.selector button {
+  width: 50%;
+  padding: 0.5rem 1rem;
+  margin: auto;
+  margin-top: 2%;
+  background-color: #6a1b9a;
+  color: #f0f0f0;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.selector button:hover {
+  background-color: #8e24aa;
+  transform: translateY(-2px);
+}
+
+.selector button:active {
+  background-color: #4a0072;
+  transform: translateY(1px);
+}
+
+.selector input {
+  border: 1px solid #888;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-color: #444;
+  color: #f0f0f0;
+}
+
+.selector input:focus {
+  outline: none;
+  border-color: #6a1b9a;
+}
+
+.options {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #6a1b9a #333;
+}
+
+.options li {
+  display: flex;
+  height: 100px;
+  border: 1px solid #bbb;
+  border-bottom: 1px solid #bbb;
+  background-color: #444;
+  transition: background-color 0.2s ease;
+}
+
+.options li:hover {
+  background-color: #6a1b9a;
+  cursor: pointer;
+}
+
+.options img {
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+  border-right: 1px solid #bbb;
+}
+
+.options li section {
+  padding-left: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.options li section span {
+  padding: 0.5rem;
+  color: #f0f0f0;
+}
+
+/* Keyframes for the animations */
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

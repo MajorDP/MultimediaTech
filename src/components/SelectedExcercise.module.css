@@ -1,0 +1,87 @@
+.container {
+  background-color: #333;
+  width: 50%;
+  height: 80vh;
+  margin-top: 1rem;
+  border: 2px solid #444;
+  border-top: none;
+  border-radius: 10px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #6a1b9a #333;
+
+  animation: slideInRight 1s forwards;
+}
+
+.intro h3 {
+  border: 1px solid black;
+  width: 50%;
+  margin: auto;
+  margin-top: 1.5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.intro p {
+  padding-top: 1.8rem;
+  width: 80%;
+  margin: auto;
+}
+
+.intro div {
+  padding-top: 2rem;
+  width: 80%;
+  margin: auto;
+}
+
+.intro img {
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  object-fit: contain;
+}
+
+.excerciseInfo {
+  width: 90%;
+  margin: auto;
+}
+
+.excerciseInfoIntro p {
+  padding-top: 1rem;
+  font-size: 2rem;
+}
+
+.excerciseInfoIntro span {
+  font-size: 1.2rem;
+}
+
+.excerciseInfoIntro ul ul li {
+  margin: 1rem;
+}
+
+.formTitle {
+  font-size: 1.3rem;
+}
+
+.placeholder {
+  width: 90%;
+  margin: auto;
+
+  padding-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+/* Keyframes for the animations */
+@keyframes slideInRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

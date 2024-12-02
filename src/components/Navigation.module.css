@@ -1,0 +1,56 @@
+.container {
+  width: 100%;
+  margin: auto;
+  height: 20%;
+  background-color: rgba(192, 186, 186, 0.2);
+  border: 1px solid black;
+  border-radius: 10px;
+  font-size: 2.2rem;
+}
+
+.container ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  padding: 0; /* Remove default padding */
+}
+
+.container ul li {
+  position: relative; /* Necessary for positioning the pseudo-element */
+}
+
+.container ul li a {
+  color: #fff; /* White text color */
+  text-decoration: none;
+  padding: 10px 15px; /* Padding for clickable area */
+  border-radius: 5px; /* Rounded corners */
+  overflow: hidden; /* Hide the overflow for the pseudo-element */
+}
+
+/* Slider effect */
+.container ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; /* Height of the slider */
+  width: 100%; /* Full width */
+  background-color: purple; /* Color of the slider */
+  transform: scaleX(0); /* Start scale at 0 */
+  transition: transform 0.3s ease; /* Smooth transition for the slider */
+}
+
+/* Fill effect on hover */
+.container ul li a:hover::after {
+  transform: scaleX(1); /* Fill the slider on hover */
+}
+
+.container ul li a img {
+  padding: 0;
+  margin: 0;
+  width: 150px;
+  height: 125px;
+
+  line-height: 0;
+}
